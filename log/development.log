@@ -1832,3 +1832,14 @@ Processing by SongsController#edit as HTML
   Rendered songs/_form.html.erb (2.2ms)
   Rendered songs/edit.html.erb within layouts/application (2.8ms)
 Completed 200 OK in 21ms (Views: 7.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/1/songs/9/edit" for 205.168.59.134 at 2017-11-08 18:42:35 +0000
+Cannot render console from 205.168.59.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#edit as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"9"}
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT 1[0m  [["artist_id", 1], ["id", 9]]
+  Rendered songs/_form.html.erb (2.1ms)
+  Rendered songs/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 8.2ms | ActiveRecord: 1.1ms)
