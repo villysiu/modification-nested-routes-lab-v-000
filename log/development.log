@@ -2571,3 +2571,12 @@ Processing by SongsController#new as HTML
   Rendered songs/_form.html.erb (3.2ms)
   Rendered songs/new.html.erb within layouts/application (4.0ms)
 Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/songs/new" for 205.168.59.134 at 2017-11-08 19:45:35 +0000
+Cannot render console from 205.168.59.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#new as HTML
+  [1m[36mArtist Load (0.3ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered songs/_form.html.erb (14.0ms)
+  Rendered songs/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 31ms (Views: 22.4ms | ActiveRecord: 1.1ms)
