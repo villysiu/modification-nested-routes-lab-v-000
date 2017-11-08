@@ -1089,3 +1089,34 @@ Processing by SongsController#edit as HTML
   Rendered songs/_form.html.erb (3.3ms)
   Rendered songs/edit.html.erb within layouts/application (4.1ms)
 Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/1/songs/9/edit" for 205.168.59.134 at 2017-11-08 18:10:27 +0000
+Cannot render console from 205.168.59.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#edit as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"9"}
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."artist_id" = ? AND "songs"."id" = ? LIMIT 1[0m  [["artist_id", 1], ["id", 9]]
+  Rendered songs/_form.html.erb (1.5ms)
+  Rendered songs/edit.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.7ms)
+
+SyntaxError (/home/villysiu/modification-nested-routes-lab-v-000/app/views/songs/_form.html.erb:5: syntax error, unexpected tIVAR, expecting '('
+...tist_select(@song.artist. @song)
+...                               ^
+/home/villysiu/modification-nested-routes-lab-v-000/app/views/songs/_form.html.erb:7: syntax error, unexpected '<', expecting keyword_end
+  <br />
+   ^
+/home/villysiu/modification-nested-routes-lab-v-000/app/views/songs/_form.html.erb:7: unterminated regexp meets end of file
+/home/villysiu/modification-nested-routes-lab-v-000/app/views/songs/_form.html.erb:7: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/songs/_form.html.erb:5: syntax error, unexpected tIVAR, expecting '('
+  app/views/songs/_form.html.erb:7: syntax error, unexpected '<', expecting keyword_end
+  app/views/songs/_form.html.erb:7: unterminated regexp meets end of file
+  app/views/songs/_form.html.erb:7: syntax error, unexpected end-of-input, expecting keyword_end
+  app/views/songs/edit.html.erb:2:in `_app_views_songs_edit_html_erb___2097194261343983485_69958206179620'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.1ms)
