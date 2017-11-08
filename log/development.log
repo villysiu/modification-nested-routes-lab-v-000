@@ -1843,3 +1843,32 @@ Processing by SongsController#edit as HTML
   Rendered songs/_form.html.erb (2.1ms)
   Rendered songs/edit.html.erb within layouts/application (2.7ms)
 Completed 200 OK in 21ms (Views: 8.2ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/songs/9" for 205.168.59.134 at 2017-11-08 18:45:40 +0000
+Cannot render console from 205.168.59.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qczH7sh+Z2YHyoHXclBoh4MBeT+Ya805/5aHW0PILLkAfU2xQxglIr36VUthAb4ycPPwDOX70R4llM3GKszTPg==", "song"=>{"title"=>"jenny2", "artist"=>"The Killers"}, "commit"=>"Update Song", "id"=>"9"}
+  [1m[35mSong Load (0.2ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 9]]
+Unpermitted parameter: artist
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "songs" SET "title" = ?, "updated_at" = ? WHERE "songs"."id" = ?  [["title", "jenny2"], ["updated_at", "2017-11-08 18:45:40.191260"], ["id", 9]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.31.208:47099/songs/9
+Completed 302 Found in 20ms (ActiveRecord: 6.8ms)
+
+
+Started PATCH "/songs/9" for 205.168.59.134 at 2017-11-08 18:45:40 +0000
+Cannot render console from 205.168.59.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qczH7sh+Z2YHyoHXclBoh4MBeT+Ya805/5aHW0PILLkAfU2xQxglIr36VUthAb4ycPPwDOX70R4llM3GKszTPg==", "song"=>{"title"=>"jenny2", "artist"=>"The Killers"}, "commit"=>"Update Song", "id"=>"9"}
+  [1m[35mSong Load (0.1ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 9]]
+Unpermitted parameter: artist
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://165.227.31.208:47099/songs/9
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
